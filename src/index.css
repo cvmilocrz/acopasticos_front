@@ -1,0 +1,266 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(255, 255, 255);
+  color: #707070;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+
+  --primary: #ffffff; /* blanco */
+  --secondary: #f5f5f5; /* white  smoke */
+  --tertiary: #004a7d;
+
+  --text-primary: #707070; /* gris */
+  --text-secondary: #333; /* gris oscuro */
+
+  --shadow: #00000033; /* negro transparente */
+
+  --danger: #f8d7da;
+  --success: #d1e7dd;
+  --warning: #fff3cd;
+  --info: #cff4fc;
+
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+input{
+  background-color: var(--secondary);
+}
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del fondo del scroll */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary); /* Color de la barra de desplazamiento */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Espacio alrededor del scroll */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-primary); /* Color de la barra de desplazamiento al hacer hover */
+}
+
+/* !Estilos para el modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  background-color: var(--shadow);
+}
+
+.modal-content {
+  margin: 4% auto;
+  max-width: fit-content;
+  position: relative;
+}
+.closeModalBtn{
+
+  background-color: var(--danger);
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  transform: translateX(-12px);
+}
+.closeModalIcon{
+  font-size: 16px;
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+  transform: translateY(-2px) translateX(.5px);
+}
+.closeModalBtn:hover{
+  color: white;
+}
+
+
+
+
+input {
+  width: 100%;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  height: 24px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+
+input::placeholder {
+  color: var(--text-primary);
+}
+select {
+  width: 100%;
+
+  height: 24px;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  appearance: none; /* Remueve el estilo por defecto del select */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+
+select option {
+  color: var(--text-primary);
+}
+
+/* Para el scroll de las opciones */
+select {
+  max-height: 300px; /* Limita la altura del dropdown */
+  overflow-y: auto;  /* Habilita el scroll cuando sea necesario */
+}
+input[type="date"] {
+  width: 100%;
+  height: 24px;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+.deleteCompanyModalButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.deleteCompanyModalContent{
+  background-color: var(--primary);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(30vh - 10vh);
+  width: calc(50vw - 10vw);
+}
+.deleteCompanyModalHeader{
+  height: 50px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deleteCompanyModalButtonCancel{
+  background-color: var(--danger);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+.deleteCompanyModalButton{
+  background-color: var(--success);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;  
+}
+.deleteCompanyModalFooter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.updateCompanyModalContent{
+  background-color: var(--primary);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(90vh - 10vh);
+  width: calc(90vw - 10vw);
+}
+.updateCompanyModalHeader{
+  height: 30px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.updateCompanyModalFooter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.usersWindowContentMenuBtns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}

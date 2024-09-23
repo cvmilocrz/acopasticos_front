@@ -1,0 +1,302 @@
+.mainCompaniesContainer {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px var(--shadow);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.companiesWindowHeader {
+    height: 40px;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.companiesWindowHeaderContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.companiesWindowHeaderContent {
+    height: 30%;
+}
+
+/* Contenedor que permita el scroll */
+.companiesWindowFooterContent {
+    height: 100%; /* Ajusta este valor si es necesario */
+    width: 100%;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    box-sizing: border-box;
+}
+
+
+
+
+.createCompanieBtn {
+    background-color: var(--success);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 0px 16px 0px 16px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+
+/* Estilos de la tabla */
+.companiesTable {
+    width: 100%;
+    margin: 0;
+    font-size: 12   px;
+    text-align: left;
+    border-collapse: collapse;
+    border-top: 1px solid var(--shadow);
+    
+}
+
+.companiesTable thead {
+    background-color: #f4f4f4;
+}
+
+/*.usersTable th, .usersTable td {
+      padding: 12px 15px;
+    }
+    */
+.companiesTable th {
+    background-color: var(--secondary);
+    color: var(txt-primary);
+    text-align: left;
+    height: 24px;    
+}
+
+.companiesTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.companiesTable tr:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+
+/* Limitar la altura de la tabla para que no desborde */
+.companiesTable {
+    max-height: 400px; /* Ajusta según el espacio que desees */
+    width: 100%;
+    overflow-y: auto; /* Habilita el scroll si el contenido sobrepasa el tamaño */
+    display: block; /* Para permitir el scroll dentro de la tabla */
+}
+
+.companiesTable thead, .companiesTable tbody {
+    display: block; /* Esto ayuda a mantener el scroll solo en el cuerpo */
+}
+
+.companiesTable tbody {
+    max-height: 300px; /* Ajusta este valor según el espacio disponible */
+    overflow-y: auto; /* Scroll en el cuerpo de la tabla */
+}
+
+.companiesTable th, .companiesTable td {
+    width: 8%; /* Asegúrate de que las celdas tengan un ancho fijo */
+    box-sizing: border-box;
+}   
+
+/* Para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .companiesTable {
+        font-size: 14px;
+    }
+
+    .companiesTable th,
+    .companiesTable td {
+        padding: 10px;
+    }
+}
+
+.actionsContainerTh{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userActions {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.userActionsTh {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItemContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 24px;
+}
+
+.userActionsIcon{
+    width: 24px;
+    height: 24px;
+}
+
+.afiliatedCompanie{
+    background-color: var(--success);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 100px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+
+.notAffiliatedCompanie{
+    background-color: var(--danger);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 100px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+
+.excelBtn{
+    background-color: var(--success);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 4px;;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+.editCompanyBtn{
+    background-color: var(--success);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 4px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+.deleteCompanyBtn{
+    background-color: var(--danger);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 4px;;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+
+.createCompanyModal {
+    height: calc(90vh - 10vh);
+    width: calc(100vw - 10vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    box-shadow: 0 0 10px var(--shadow);
+    box-sizing: border-box;
+    background-color: var(--primary);
+}
+.createCompanyModalHeader {
+    height: 40px;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createCompanyModalContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.createComapanyGroup{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.cancelCreateCompanyBtn{
+    background-color: var(--danger);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 50px;
+    padding: 0px 16px 0px 16px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}
+
+.createCompanyFormBtn{
+    background-color: var(--success);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 50px;
+    padding: 0px 16px 0px 16px;
+    border: solid 2px var(--shadow);
+    cursor: pointer;
+}   
+
+.createCompanyGroupBtn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
