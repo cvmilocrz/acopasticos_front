@@ -1,0 +1,408 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(255, 255, 255);
+  color: #707070;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+
+  --primary: #ffffff; /* blanco */
+  --secondary: #f5f5f5; /* white  smoke */
+  --tertiary: #004a7d;
+
+  --text-primary: #707070; /* gris */
+  --text-secondary: #333; /* gris oscuro */
+
+  --shadow: #00000033; /* negro transparente */
+
+  --danger: #f8d7da;
+  --success: #d1e7dd;
+  --warning: #fff3cd;
+  --info: #cff4fc;
+
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+input{
+  background-color: var(--secondary);
+}
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del fondo del scroll */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary); /* Color de la barra de desplazamiento */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Espacio alrededor del scroll */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-primary); /* Color de la barra de desplazamiento al hacer hover */
+}
+
+/* !Estilos para el modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  background-color: var(--shadow);
+}
+
+.modal-content {
+  margin: 4% auto;
+  max-width: fit-content;
+  position: relative;
+}
+.closeModalBtn{
+
+  background-color: var(--danger);
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  transform: translateX(-12px);
+}
+.closeModalIcon{
+  font-size: 16px;
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+  transform: translateY(-2px) translateX(.5px);
+}
+.closeModalBtn:hover{
+  color: white;
+}
+
+
+
+
+input {
+  width: 100%;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  height: 24px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+
+input::placeholder {
+  color: var(--text-primary);
+}
+select {
+  width: 100%;
+
+  height: 24px;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  appearance: none; /* Remueve el estilo por defecto del select */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+
+select option {
+  color: var(--text-primary);
+}
+
+/* Para el scroll de las opciones */
+select {
+  max-height: 300px; /* Limita la altura del dropdown */
+  overflow-y: auto;  /* Habilita el scroll cuando sea necesario */
+}
+input[type="date"] {
+  width: 100%;
+  height: 24px;
+  color: var(--text-primary);
+  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: var(--success);
+  outline: none;
+  box-shadow: 0 0 5px var(--success);
+}
+.deleteCompanyModalButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.deleteCompanyModalContent{
+  background-color: var(--primary);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(30vh - 10vh);
+  width: calc(50vw - 10vw);
+}
+.deleteCompanyModalHeader{
+  height: 50px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deleteCompanyModalButtonCancel{
+  background-color: var(--danger);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+.deleteCompanyModalButton{
+  background-color: var(--success);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;  
+}
+.deleteCompanyModalFooter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.updateCompanyModalContent{
+  background-color: var(--primary);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(90vh - 10vh);
+  width: calc(90vw - 10vw);
+}
+.updateCompanyModalHeader{
+  height: 30px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.updateCompanyModalFooter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.usersWindowContentMenuBtns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+.spinner {
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+
+.spinner.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.spinner .spinner-blade {
+  position: absolute;
+  left: 0.4629em;
+  bottom: 0;
+  width: 0.074em;
+  height: 0.2777em;
+  border-radius: 0.0555em;
+  background-color: transparent;
+  -webkit-transform-origin: center -0.2222em;
+  -ms-transform-origin: center -0.2222em;
+  transform-origin: center -0.2222em;
+  animation: spinner-fade9234 1s infinite linear;
+}
+
+.spinner .spinner-blade:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.spinner .spinner-blade:nth-child(2) {
+  -webkit-animation-delay: 0.083s;
+  animation-delay: 0.083s;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.spinner .spinner-blade:nth-child(3) {
+  -webkit-animation-delay: 0.166s;
+  animation-delay: 0.166s;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.spinner .spinner-blade:nth-child(4) {
+  -webkit-animation-delay: 0.249s;
+  animation-delay: 0.249s;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.spinner .spinner-blade:nth-child(5) {
+  -webkit-animation-delay: 0.332s;
+  animation-delay: 0.332s;
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.spinner .spinner-blade:nth-child(6) {
+  -webkit-animation-delay: 0.415s;
+  animation-delay: 0.415s;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.spinner .spinner-blade:nth-child(7) {
+  -webkit-animation-delay: 0.498s;
+  animation-delay: 0.498s;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.spinner .spinner-blade:nth-child(8) {
+  -webkit-animation-delay: 0.581s;
+  animation-delay: 0.581s;
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.spinner .spinner-blade:nth-child(9) {
+  -webkit-animation-delay: 0.664s;
+  animation-delay: 0.664s;
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.spinner .spinner-blade:nth-child(10) {
+  -webkit-animation-delay: 0.747s;
+  animation-delay: 0.747s;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.spinner .spinner-blade:nth-child(11) {
+  -webkit-animation-delay: 0.83s;
+  animation-delay: 0.83s;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.spinner .spinner-blade:nth-child(12) {
+  -webkit-animation-delay: 0.913s;
+  animation-delay: 0.913s;
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+@keyframes spinner-fade9234 {
+  0% {
+    background-color: #69717d;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}

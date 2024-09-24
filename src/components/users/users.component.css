@@ -1,0 +1,377 @@
+.usersContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: 0 0 10px var(--shadow);
+  box-sizing: border-box;
+}
+.usersWindowHeaderContentleft p {
+  text-align: left;
+}
+
+/* !nombre de ventana */
+.usersWindowHeader {
+  height: 5%;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ?*/
+.usersWindowHeaderContent {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.usersWindowHeaderContentleft {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.usersWindowHeaderContentRight {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* description */
+.usersWindowDescription {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+
+
+
+
+
+/* !ventana de usuarios */
+.usersWindowContentMenu {
+  height: 48px;
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createUserBtn {
+  background-color: var(--success);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+  margin-right: 24px;
+}
+
+.usersFilterContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.usersFilter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  width: 80px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.usersFilterInput {
+  border: 2px solid #ccc;
+  height: 28px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.usersFilterInput:focus {
+  border-color: var(--success);
+}
+
+
+
+
+.usersWindowContent {
+  height: 67%;
+  width: 100%;
+  border-radius: 0px 0px 24px 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+/* Estilos de la tabla */
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.usersTable thead {
+  background-color: #f4f4f4;
+}
+
+/*.usersTable th, .usersTable td {
+    padding: 12px 15px;
+  }
+  */
+.usersTable th {
+  border-top: 1px solid var(--shadow);
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  text-align: left;
+  height: 24px;
+}
+
+.usersTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+.usersTable tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .usersTable {
+    font-size: 14px;
+  }
+
+  .usersTable th,
+  .usersTable td {
+    padding: 10px;
+  }
+}
+
+.userActions {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userActionsTh{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteUserBtn {
+  background-color: var(--danger);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 2px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+
+.editUserBtn {
+  background-color: var(--success);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 2px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+
+.userTypeInterno {
+  background-color: var(--success);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  border: solid 2px var(--shadow);
+  width: 30%;
+}
+
+.userTypeExterno {
+  background-color: var(--danger);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 30%;
+  border: solid 2px var(--shadow);
+}
+
+.editUserModal {
+  height: calc(90vh - 20vh);
+  width: calc(50vw - 10vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: 0 0 10px var(--shadow);
+  box-sizing: border-box;
+  background-color: var(--primary);
+}
+.deleteUserModal {
+  height: calc(40vh - 10vh);
+  width: calc(50vw - 10vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: 0 0 10px var(--shadow);
+  box-sizing: border-box;
+  background-color: var(--primary);
+}
+.createUserModal {
+  height: calc(90vh - 20vh);
+  width: calc(50vw - 10vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: 0 0 10px var(--shadow);
+  box-sizing: border-box;
+  background-color: var(--primary);
+}
+
+.editUserModalHeader {
+  height: 40px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editUserModalHeaderContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.createUserFormInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.createUserFormGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 32px;
+}
+
+.createUserFormInput:last-child {
+  margin-right: 0;
+}
+
+.createUserFormInput label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.cancelCreateUserBtn {
+  background-color: var(--danger);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 50px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+
+.createUserFormBtn {
+  background-color: var(--success);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 50px;
+  padding: 0px 16px 0px 16px;
+  border: solid 2px var(--shadow);
+  cursor: pointer;
+}
+
+.createUserFormGroupBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.UsersIconModal{
+  height: 40%;
+}

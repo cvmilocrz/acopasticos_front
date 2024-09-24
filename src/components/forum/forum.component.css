@@ -1,0 +1,79 @@
+.forumContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 0 10px var(--shadow);
+}
+.forumContainerHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+    background-color: var(--secondary);
+    border-bottom: 1px  var(--shadow);
+}
+.forumContainerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.forumCardsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.forumCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
+    border-radius: 24px;
+    box-shadow: 0px 0px 10px var(--shadow);
+    transition: all 0.3s ease-in-out;
+}
+.forumCardHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+    background-color: var(--secondary);
+    border-bottom: 1px  var(--shadow);
+}
+.forumCardContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 97%;
+}
+
+.forumCardContent img{
+    width: 80%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+.forumCardContent p{
+    width: 80%;
+    text-align: center;
+}
