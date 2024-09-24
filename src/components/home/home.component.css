@@ -22,7 +22,7 @@
 .homeContainerBody{
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     height: 100%;
